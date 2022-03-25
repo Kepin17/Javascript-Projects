@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.content-bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgb(84, 84, 214), rgb(77, 77, 170));
+}
+
+.dasboard-logo {
+  width: 500px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn {
+  background-color: transparent;
+  border: 2px solid rgb(255, 142, 142);
+  color: rgb(255, 151, 151);
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px 30px;
+  transition: 1s;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.start-btn:hover {
+  background-color: rgb(255, 151, 151);
+  color: #fff;
+  box-shadow: 0 20px 30px rgb(158, 146, 146);
+}
+
+.quiz-box {
+  width: 80%;
+  height: 80vh;
+  border: 2px solid;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: auto;
+  position: relative;
+  top: 6em;
+}
+
+.quiz_action {
+  width: 90%;
+  height: 100%;
+  margin: 2%;
+  padding-left: 35px;
+}
+
+.quiz_action h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px;
+}
+
+.quiz_action #red {
+  color: crimson;
+}
+
+.line {
+  width: 200px;
+  height: 5px;
+  background-color: rgb(84, 84, 214);
+  margin: 5px 0;
+  animation: line 0.5s ease forwards;
+}
+
+.line:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+.quiz h3 {
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+.quiz input {
+  margin: 20px;
+}
+
+#next-btn {
+  padding: 10px 30px;
+  color: #6767e2;
+  background-color: #fff;
+  border: 2px solid;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#next-btn:hover {
+  background-color: #6767e2;
+  color: #fff;
+}
+
+.flexbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  width: 150px;
+  height: 30px;
+  background-color: #6767e2;
+  text-align: center;
+  color: #fff;
+  line-height: 30px;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 192);
+}
+
+/* Closing */
+
+.wrapper h1 {
+  font-size: 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(235, 228, 15);
+}
+
+.wrapper #scoreText {
+  padding: 25px 0;
+  font-size: 50px;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 50px;
+  }
+  50% {
+    width: 100px;
+  }
+  75% {
+    width: 150px;
+  }
+  100% {
+    width: 200px;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Color</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      width: 100%;
+      height: 100vh;
+      background-color: antiquewhite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .textbox {
+      text-align: center;
+    }
+    .textbox h1 {
+      font-size: 60px;
+    }
+
+    .textbox .change-btn {
+      padding: 10px 40px;
+      margin: 0 20px;
+      font-size: 20px;
+      border-radius: 20px;
+    }
+
+    .red {
+      background-color: red;
+      cursor: pointer;
+    }
+    .yellow {
+      background-color: yellow;
+      cursor: pointer;
+    }
+
+    .blue {
+      background-color: blue;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <header id="background">
+      <div class="textbox">
+        <h1>Hi Please Change My Color!</h1>
+        <br />
+        <button class="change-btn red" onclick="changeToRed()">Red</button>
+        <button class="change-btn yellow" onclick="changeToYellow()">Yellow</button>
+        <button class="change-btn blue" onclick="changeToBlue()">Blue</button>
+      </div>
+    </header>
+
+    <script>
+      function changeToRed() {
+        document.getElementById("background").style.backgroundColor = "red";
+      }
+      function changeToYellow() {
+        document.getElementById("background").style.backgroundColor = "yellow";
+      }
+      function changeToBlue() {
+        document.getElementById("background").style.backgroundColor = "blue";
+      }
+    </script>
+  </body>
+</html>

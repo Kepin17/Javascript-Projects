@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Mini Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content-bg">
+      <!-- Dasboard -->
+      <div class="wrapper" id="dashboard">
+        <img src="https://images.cnbctv18.com/wp-content/uploads/2018/05/10.jpg" class="dasboard-logo" />
+        <button onclick="startGame()" class="start-btn">Quiz Start</button>
+      </div>
+      <!-- Quiz Title -->
+      <div class="wrapper quiz-box hidden" id="quizs">
+        <div class="quiz_action">
+          <div class="flexbox">
+            <h2>Question <span id="red">!</span></h2>
+            <div class="time">Quiz End in <span id="time">10:00</span></div>
+          </div>
+          <div class="line"></div>
+
+          <!-- Quiz Section -->
+
+          <section class="quiz">
+            <h3 id="question"></h3>
+            <input type="radio" name="choices" data-id="0" id="choice" />
+            <label for="choice0" id="choiceText0"></label> <br />
+            <input type="radio" name="choices" data-id="1" id="choice" />
+            <label for="choice1" id="choiceText1"></label> <br />
+            <input type="radio" name="choices" data-id="2" id="choice" />
+            <label for="choice2" id="choiceText2"></label> <br />
+            <input type="radio" name="choices" data-id="3" id="choice" />
+            <label for="choice3" id="choiceText3"></label> <br />
+            <br />
+
+            <button id="next-btn" onclick="nextQuest()">Next</button>
+          </section>
+        </div>
+      </div>
+
+      <center>
+
+        <div class="hidden" id="closing">
+          <div class="wrapper">
+            <h1>Game Over</h1>
+            <h2 id="scoreText"></h2>
+          </div>
+        </div>
+      </div>
+      </center>
+
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkMode</title>
+  </head>
+  <body>
+    <h1>Dark Mode Test</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laborum recusandae a repellendus, eveniet natus illum architecto eius excepturi facilis laudantium iusto quia voluptate ratione blanditiis enim dolorem non in?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laborum recusandae a repellendus, eveniet natus illum architecto eius excepturi facilis laudantium iusto quia voluptate ratione blanditiis enim dolorem non in?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laborum recusandae a repellendus, eveniet natus illum architecto eius excepturi facilis laudantium iusto quia voluptate ratione blanditiis enim dolorem non in?</p>
+
+    <span class="icon" onclick="setDarkMode()" id="darkbtn">☀️🌑</span>
+  </body>
+  <style>
+    body {
+      transition: 1s;
+    }
+    .icon {
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .darkmode {
+      background-color: black;
+      color: #fff;
+      transition: 1s;
+    }
+  </style>
+
+  <script>
+    if (localStorage.getItem("theme") == "dark") setDarkMode();
+
+    // Dark mode
+
+    function setDarkMode() {
+      let emot = "";
+      let isDark = document.body.classList.toggle("darkmode");
+      if (isDark) {
+        // document.body.setAttribute("id", "darkmode");
+        emot = "☀️";
+        localStorage.setItem("theme", "dark");
+      } else {
+        // document.body.setAttribute("id", "");
+        emot = "🌑";
+        localStorage.removeItem("theme");
+      }
+      document.getElementById("darkbtn").innerHTML = emot;
+    }
+  </script>
+</html>
